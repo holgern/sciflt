@@ -87,7 +87,7 @@ case 'define' then
 	model.rpar=[];
 	model.blocktype='c';
 	model.dep_ut=[%t %f];	
-	exprs={"0";"";"";"";""}
+	exprs=["0";"";"";"";""]
 	gr_i='scicos_icons(model.ipar(1),sz,orig);';
 	x=standard_define([2 2],model,exprs,gr_i)
 end

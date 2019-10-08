@@ -7,9 +7,9 @@
 
 src_dir = get_absolute_file_path("builder_src.sce");
 
-tbx_builder_src_lang("fortran", src_dir);
-tbx_builder_src_lang("c"      , src_dir);
-//tbx_builder_src_lang("c2"      , src_dir);
+//tbx_builder_src_lang("fortran", src_dir);
+tbx_builder_src_lang("c_scilab", src_dir);
+tbx_builder_src_lang("c_xcos", src_dir);
 
 clear tbx_builder_src_lang;
 clear src_dir;

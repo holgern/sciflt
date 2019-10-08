@@ -5,7 +5,7 @@ clc; mode(1);lines(0);
 // non-linear function using a Sugeno-type FIS with linear output func
 
 // Read the FIS structure from a file.
-fis = importfis (demo_path+'/cubic_approximator.fis');
+fis = importfis (demo_path'/cubic_approximator.fis');
 
 // Plot the input membership functions and linear output functions.
 scf();plotvar (fis, 'input', 1);

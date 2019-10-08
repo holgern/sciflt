@@ -30,3 +30,9 @@
 
 # Debug files
 *.dSYM/
+
+# Scilab Binary files
+*.bin
+
+# Auto generated html
+*.html

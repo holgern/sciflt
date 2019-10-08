@@ -1,0 +1,29 @@
+Toolbox: sciFLT
+
+Title: Scilab Fuzzy Logic Toolbox
+
+Summary: This is a Scilab Fuzzy Logic Toolbox for creating Takagi-Sugeno Fuzzy and Mamdani fuzzy systems.
+
+Version: 0.5
+
+Date: 2019-09-30
+
+Author: Jaime Urzua Grez, Holger Nahrstaedt, Tan Chin Luh
+
+Maintainer: Tan Chin Luh <chinluh.tan@bytecode-asia.com>
+
+Category: Modeling and Control Tools
+
+Entity: none
+
+WebSite: https://www.bytecode-asia.com/
+
+URL: http://es.geocities.com/jaime_urzua/sciflt/sciflt.html
+
+License: GPL (>=2)
+
+ScilabVersion: >= 6.0
+
+Depends: 
+
+Description:  

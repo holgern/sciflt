@@ -71,12 +71,16 @@ fls.TNormPar=0;
 fls.Comp="one";
 fls.CompPar=0;
 fls.defuzzMethod="wtaver";
+fls.ImpMethod = 'min';
+fls.AggMethod = 'max';
 
 // THE TYPE
 if argn(2)>=1 then
 	if (fls_type=='m') then
 		fls.type='m';
 		fls.defuzzMethod='centroide';
+        fls.SNorm="max";
+        fls.TNorm="min";
 	elseif (fls_type=='ts') then
 		// DO NOTHING BECAUSE USE DEFAULT VALUES
 	else

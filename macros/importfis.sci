@@ -75,6 +75,18 @@ fls.comment="Imported from Matlab fis - check it please!";
 curpart=0;
 while (meof(fd)==0),
 	txt=mgetl(fd,1);
+
+    if isempty(txt);
+        eof_cnt = eof_cnt + 1;
+        if eof_cnt > 10;
+            break;
+        end
+        
+    else
+        eof_cnt = 0;
+    end
+    
+    
 	if txt~=[] then
 		// TRY TO FIND PART IDENTIFIER
 		[a,b]=grep(txt,tofind1);

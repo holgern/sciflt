@@ -21,8 +21,8 @@ for a=linspace(-1,1,20),
 			idx=find((((par(1)+par(2))/2)<x)&(x<=par(2)));
 			Y2(idx)=2*((par(2)-x(idx))/(par(2)-par(1))).^2;		
 		end		
-		computed = Y1;
-		expected = Y2;
+		computed = Y1
+		expected = Y2
 
 		assert_checkalmostequal ( computed , expected , %eps);		
 	end

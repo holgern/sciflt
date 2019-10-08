@@ -1,8 +1,11 @@
 CHANGELOG:
 ----------
-2014-10-20  Holger Nahrstaedt
-	* 0.4.7
+2019-10-01 0.5.0
+	* Migrated to Scilab 6
+
+2014-10-20  0.4.7
 	* 1473 fixed (thanks to  Chin Luh Tan)
+
 2014-03-21    Holger Nahrstaedt
 	* 0.4.6
 	* gbellmf can have negative c (thanks to  Chin Luh Tan)

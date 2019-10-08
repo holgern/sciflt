@@ -1,7 +1,7 @@
 function editfls(varargin)
 //GUI fls editor.
 //Calling Sequence
-//y=editfls(x,fls,[npev])
+//y=evalfls(x,fls,[npev])
 //Parameters
 //fls:fls structure to evaluate
 //Description
@@ -65,6 +65,7 @@ function editfls(varargin)
 // ----------------------------------------------------------------------
 
 nav=sciFLTgetFLS();
+
 TCL_EvalStr("sciFLTEditorInit");
 nf=TCL_GetVar("sciFLTEditorTable(curfileidx)");
 TCL_EvalStr("incr sciFLTEditorTable(curfileidx)");

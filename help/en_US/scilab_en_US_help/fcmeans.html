@@ -1,0 +1,114 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>fcmeans</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="evalfls.html">&lt;&lt; evalfls</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_161df957ee5084fa35dfab9386dd87ac.html">sciFLT</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="fls_structure.html">fls_structure &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path" dir="ltr"><a href="index.html">sciFLT</a> &gt;&gt; <a href="section_161df957ee5084fa35dfab9386dd87ac.html">sciFLT</a> &gt; fcmeans</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">fcmeans</h1>
+    <p class="refpurpose">Data clustering using fuzzy c-means.</p></div>
+
+
+<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
+   <div class="synopsis"><pre><span class="default">[</span><span class="default">centers</span><span class="default">,</span><span class="default">U</span><span class="default">,</span><span class="default">ofun</span><span class="default">,</span><span class="default">ofunk</span><span class="default">,</span><span class="default">em</span><span class="default">]=</span><span class="functionid">fcmeans</span><span class="default">(</span><span class="default">Xin</span><span class="default">,</span><span class="default">c</span><span class="default">,</span><span class="default">m</span><span class="default"> [,</span><span class="default">maxiter</span><span class="default"> [,</span><span class="default">epsilon</span><span class="default"> [,</span><span class="default">verbose</span><span class="default">]]])</span></pre></div></div>
+
+<div class="refsection"><h3 class="title">Parameters</h3>
+   <dl><dt><span class="term">Xin:</span>
+      <dd><p class="para">matrix of reals.The pairs of inputs points.</p></dd></dt>
+   <dt><span class="term">c:</span>
+      <dd><p class="para">integer, number of clusters.</p></dd></dt>
+   <dt><span class="term">m:</span>
+      <dd><p class="para">scalar, fizzifier constant.</p></dd></dt>
+   <dt><span class="term">maxiter:</span>
+      <dd><p class="para">integer, maximum number of iterations. The defaul value is 100</p></dd></dt>
+   <dt><span class="term">epsilon:</span>
+      <dd><p class="para">scalar, minimum change value between two consecutive iterations. The default value is 0.001</p></dd></dt>
+   <dt><span class="term">verbose:</span>
+      <dd><p class="para">boolean, display information.The default value is %f.</p></dd></dt></dl></div>
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para"><code class="literal" dir="ltr">fcmeans</code> find the <code class="literal" dir="ltr">c</code> number of clusters in the
+data set <code class="literal" dir="ltr">Xin</code> using fuzzy c-means algorithm. The centers for
+each cluster are returned in <code class="literal" dir="ltr">centers</code>. <code class="literal" dir="ltr">U</code> contains
+the grade of membership of each <code class="literal" dir="ltr">Xin</code> point in each cluster.
+<code class="literal" dir="ltr">ofun</code> is the last objetive function. <code class="literal" dir="ltr">ofunk</code> is the
+objetive function in each iteration. <code class="literal" dir="ltr">em</code> is the exit mode, if
+<code class="literal" dir="ltr">em</code> is <code class="literal" dir="ltr">%t</code> then the maximum number of iteration
+<code class="literal" dir="ltr">maxiter</code> was reached, if <code class="literal" dir="ltr">em</code> is <code class="literal" dir="ltr">%f</code>
+then the minimum change between iteration <code class="literal" dir="ltr">epsilon</code> was
+reached.</p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabcomment">// Take 50 random pairs of points</span>
+<span class="scilabid">Xin</span><span class="scilaboperator">=</span><a class="scilabcommand" href="scilab://rand">rand</a><span class="scilabopenclose">(</span><span class="scilabnumber">100</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabcomment">// Find 7 clusters</span>
+<span class="scilabopenclose">[</span><span class="scilabid">centers</span><span class="scilabdefault">,</span><span class="scilabid">U</span><span class="scilabdefault">,</span><span class="scilabid">ofun</span><span class="scilabdefault">,</span><span class="scilabid">ofunk</span><span class="scilabopenclose">]</span><span class="scilaboperator">=</span><span class="scilabid">fcmeans</span><span class="scilabopenclose">(</span><span class="scilabid">Xin</span><span class="scilabdefault">,</span><span class="scilabnumber">7</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabcomment">// Display information</span>
+<span class="scilabid">scf</span><span class="scilabopenclose">(</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span><span class="scilabid">clf</span><span class="scilabopenclose">(</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">subplot</span><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<a class="scilabcommand" href="scilab://plot2d">plot2d</a><span class="scilabopenclose">(</span><span class="scilabid">Xin</span><span class="scilabopenclose">(</span><span class="scilabspecial">:</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabopenclose">)</span><span class="scilabdefault">,</span><span class="scilabid">Xin</span><span class="scilabopenclose">(</span><span class="scilabspecial">:</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabid">rect</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">0</span> <span class="scilabnumber">0</span> <span class="scilabnumber">1</span> <span class="scilabnumber">1</span><span class="scilabopenclose">]</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<a class="scilabcommand" href="scilab://xtitle">xtitle</a><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">Input pair of points</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">x</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">y</span><span class="scilabstring">&#0034;</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">subplot</span><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<a class="scilabcommand" href="scilab://plot2d">plot2d</a><span class="scilabopenclose">(</span><span class="scilabid">centers</span><span class="scilabopenclose">(</span><span class="scilabspecial">:</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabopenclose">)</span><span class="scilabdefault">,</span><span class="scilabid">centers</span><span class="scilabopenclose">(</span><span class="scilabspecial">:</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabid">rect</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">0</span> <span class="scilabnumber">0</span> <span class="scilabnumber">1</span> <span class="scilabnumber">1</span><span class="scilabopenclose">]</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<a class="scilabcommand" href="scilab://xtitle">xtitle</a><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">Cluster centers</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">x</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">y</span><span class="scilabstring">&#0034;</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">subplot</span><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">plot</span><span class="scilabopenclose">(</span><span class="scilabid">ofunk</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<a class="scilabcommand" href="scilab://xtitle">xtitle</a><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">Objetive function in each iteration</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">k</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">ofun</span><span class="scilabstring">&#0034;</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">See also</h3>
+   <ul class="itemizedlist"><li class="member"><a href="subclust.html" class="link">subclust</a></li>
+   <li class="member"><a href="inwichclust.html" class="link">inwichclust</a></li></ul></div>
+
+<div class="refsection"><h3 class="title">Authors</h3>
+   <ul class="itemizedlist"><li class="member">Jaime Urzua Grez</li>
+   <li class="member">Holger Nahrstaedt</li></ul></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="evalfls.html">&lt;&lt; evalfls</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_161df957ee5084fa35dfab9386dd87ac.html">sciFLT</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="fls_structure.html">fls_structure &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

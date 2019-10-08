@@ -13,7 +13,7 @@ assert_checkalmostequal ( computed , expected , %eps );
 x=linspace(0,1,1000)';
 for h=[1 5 10 100 1000 100000],
 	Y1=complement(x,"yager",h);
-	Y2=(1-x.^h).^(1/h);
+	Y2=(1-x.^h)^(1/h);
         computed = Y1;
         expected = Y2;
 

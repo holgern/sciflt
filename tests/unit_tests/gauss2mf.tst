@@ -16,7 +16,7 @@ for a=[0 0.2 0.4 0.6 0.8 1],
 				computed = Y1;
 				expected = Y2;
 
-				assert_checkalmostequal ( computed , expected , %eps, %eps*10);	
+				assert_checkalmostequal ( computed , expected , %eps);	
 			end
 		end
 

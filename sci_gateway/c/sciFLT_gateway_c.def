@@ -1,0 +1,18 @@
+LIBRARY    sciFLT_gateway_c.dll
+EXPORTS
+	find_label
+	flsencode2
+	inter_flsencode
+	inter_evalfls
+	inter_complement
+	inter_anymf
+	inter_mfeval
+	inter_tnorm
+	inter_snorm
+	inter_defuzzm
+	inter_repvecc
+	inter_repvec
+	inter_fltmulnor
+	inter_fltsumnor
+	inter_sp01
+	sciFLT_gateway_c

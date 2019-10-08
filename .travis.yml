@@ -1,10 +1,10 @@
-dist: trusty
+dist: bionic
 language: cpp
 os:
   - linux
 before_install:
   - sudo apt-get update -qq
-  - sudo apt-get install -y scilab gfortran
+  - sudo apt-get install -y scilab gfortran f2c
   - scilab -version; true
 script:
   - scilab -nwni -e 'result = exec("builder.sce", "errcatch"); exit(result)'

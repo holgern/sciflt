@@ -28,7 +28,7 @@ for i=1:size(centers,1),
 end
 
 // Find clusters
-centers2=subclust(dta2,0.35);
+centers2=subclust(dta2',0.35);
 
 // Plot Data
 a=gca();

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE toc PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 1.0//EN" "http://java.sun.com/products/javahelp/toc_1_0.dtd">
+<toc version="1.0">
+<tocitem target="index" text="sciFLT">
+<tocitem target="section_161df957ee5084fa35dfab9386dd87ac" text="sciFLT">
+<tocitem target="about_FLT" text="about_FLT"/>
+<tocitem target="addmf" text="addmf"/>
+<tocitem target="addrule" text="addrule"/>
+<tocitem target="addvar" text="addvar"/>
+<tocitem target="checkrule" text="checkrule"/>
+<tocitem target="complement" text="complement"/>
+<tocitem target="constant" text="constant"/>
+<tocitem target="defuzzm" text="defuzzm"/>
+<tocitem target="delmf" text="delmf"/>
+<tocitem target="delvar" text="delvar"/>
+<tocitem target="dsigmf" text="dsigmf"/>
+<tocitem target="editfls" text="editfls"/>
+<tocitem target="evalfls" text="evalfls"/>
+<tocitem target="fcmeans" text="fcmeans"/>
+<tocitem target="fls_structure" text="fls_structure"/>
+<tocitem target="flt_path" text="flt_path"/>
+<tocitem target="fuzzapp" text="fuzzapp"/>
+<tocitem target="gauss2mf" text="gauss2mf"/>
+<tocitem target="gaussmf" text="gaussmf"/>
+<tocitem target="gbellmf" text="gbellmf"/>
+<tocitem target="importfis" text="importfis"/>
+<tocitem target="inwichclust" text="inwichclust"/>
+<tocitem target="linear" text="linear"/>
+<tocitem target="loadfls" text="loadfls"/>
+<tocitem target="m2ts" text="m2ts"/>
+<tocitem target="member_functions" text="member_functions"/>
+<tocitem target="mfeval" text="mfeval"/>
+<tocitem target="newfls" text="newfls"/>
+<tocitem target="optfls01" text="optfls01"/>
+<tocitem target="pimf" text="pimf"/>
+<tocitem target="plotsurf" text="plotsurf"/>
+<tocitem target="plotvar" text="plotvar"/>
+<tocitem target="printrule" text="printrule"/>
+<tocitem target="psigmf" text="psigmf"/>
+<tocitem target="repvec" text="repvec"/>
+<tocitem target="savefls" text="savefls"/>
+<tocitem target="sciFLTEditor" text="sciFLTEditor"/>
+<tocitem target="scicos_complement" text="scicos_complement"/>
+<tocitem target="scicos_fls" text="scicos_fls"/>
+<tocitem target="scicos_mf" text="scicos_mf"/>
+<tocitem target="scicos_snorm" text="scicos_snorm"/>
+<tocitem target="scicos_tnorm" text="scicos_tnorm"/>
+<tocitem target="sigmf" text="sigmf"/>
+<tocitem target="smf" text="smf"/>
+<tocitem target="snorm" text="snorm"/>
+<tocitem target="subclust" text="subclust"/>
+<tocitem target="tnorm" text="tnorm"/>
+<tocitem target="trapmf" text="trapmf"/>
+<tocitem target="trimf" text="trimf"/>
+<tocitem target="zmf" text="zmf"/>
+</tocitem>
+</tocitem>
+</toc>

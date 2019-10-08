@@ -58,7 +58,7 @@ for npart=[7 10 15],
 	plot2d(X,E2,rect=[-%pi 0 %pi m1])
 	xtitle("","x","approx error");
 	// wait 2 seconds
-	xpause(2e6);
+	sleep(2000);
 end
 write(%io(2),"The end");
 write(%io(2),"");

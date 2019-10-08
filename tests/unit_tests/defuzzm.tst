@@ -13,7 +13,7 @@ Y2=defuzzm(x,y,"centroide");
 computed = Y1
  expected = Y2
 
-assert_checkalmostequal ( computed , expected , %eps, %eps*100);
+assert_checkalmostequal ( computed , expected , %eps);
 	
 	
 	
@@ -34,7 +34,7 @@ Y2=defuzzm(x,y,"bisector");
 computed = Y1
 expected = Y2
 
-assert_checkalmostequal ( computed , expected , %eps, %eps*10);
+assert_checkalmostequal ( computed , expected , %eps);
 
 // MEAN OF MAXIMUM
 x=linspace(0,10,1000)';
@@ -49,7 +49,7 @@ Y2=defuzzm(x,y,"mom");
 computed = Y1
 expected = Y2
 
-assert_checkalmostequal ( computed , expected , %eps, %eps*10);
+assert_checkalmostequal ( computed , expected , %eps);
 	
 // LARGEST OF MAXIMUM
 x=linspace(0,10,1000)';
@@ -65,7 +65,7 @@ Y2=defuzzm(x,y,"lom");
 computed = Y1
 expected = Y2
 
-assert_checkalmostequal ( computed , expected , %eps, %eps*10);
+assert_checkalmostequal ( computed , expected , %eps);
 	
 // SHORTEST OF MAXIMUM
 x=linspace(0,10,1000)';
@@ -81,4 +81,4 @@ Y2=defuzzm(x,y,"som");
 computed = Y1
 expected = Y2
 
-assert_checkalmostequal ( computed , expected , %eps, %eps*10);
+assert_checkalmostequal ( computed , expected , %eps);

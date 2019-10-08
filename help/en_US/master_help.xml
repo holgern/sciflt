@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book [
+<!--Begin Entities-->
+<!ENTITY a6dc91565bcce3a68265de808717a8fff SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/about_FLT.xml">
+<!ENTITY aeb1102e1b9df7b0a45c927effcf5b02c SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/addmf.xml">
+<!ENTITY aa48070b85ac1ef4ecf2277d1e43a5376 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/addrule.xml">
+<!ENTITY ae716537cb3de5dec6ea40c2712bf7a4d SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/addvar.xml">
+<!ENTITY a9660340b11dadfe0e7c8972a0bacf359 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/checkrule.xml">
+<!ENTITY a2813e912aa8fa71c8949663ad92a2d54 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/complement.xml">
+<!ENTITY a696eec6f5792c1494e30da29c5eda787 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/constant.xml">
+<!ENTITY ae85e9ede923f7a9afc23122d72e86992 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/defuzzm.xml">
+<!ENTITY aab8ce38a86009853194617e4e792f229 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/delmf.xml">
+<!ENTITY a86bf78435f5c51114684c91a6fa29987 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/delvar.xml">
+<!ENTITY ada0ea347a5383186b26b626de3892f91 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/dsigmf.xml">
+<!ENTITY a9a6c9fa481a7a6fb512945b2aec5a5f9 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/editfls.xml">
+<!ENTITY a57e365200a376ccbf4261f7a0378cf06 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/evalfls.xml">
+<!ENTITY aa0c23cd6e0e6ccf4cb21e64e443f3088 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/fcmeans.xml">
+<!ENTITY ae135d224b508eec3d98e3c5dbec60b35 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/fls_structure.xml">
+<!ENTITY a3cf6049b40f7caea58058f3493e19bcb SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/flt_path.xml">
+<!ENTITY aface93bc9ef543715db47a6445584ccc SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/fuzzapp.xml">
+<!ENTITY abafbfccf733a5fe25546baa0a4d1c3e1 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/gauss2mf.xml">
+<!ENTITY a91d711af559b60c30b54e31575f8ad7b SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/gaussmf.xml">
+<!ENTITY a9599cdae80fa26cd17feb90ee13fcc32 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/gbellmf.xml">
+<!ENTITY a5a622b87953e41db4491a973b7e1ef28 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/importfis.xml">
+<!ENTITY a59339375356ef0b6ccb229f8825d2824 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/inwichclust.xml">
+<!ENTITY a55ef5489248981558802be7aea15dd30 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/linear.xml">
+<!ENTITY a5770fab995ea3dc708f1d377d94f44c4 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/loadfls.xml">
+<!ENTITY a256b31eedbef023dbb4fc4b26ff0597b SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/m2ts.xml">
+<!ENTITY a708c900c5e97e457aa10a0146c57f08b SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/member_functions.xml">
+<!ENTITY ae48e570c6bf461d62271a7c4ef4491ff SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/mfeval.xml">
+<!ENTITY af1433b77d629cc00875551002e16d307 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/newfls.xml">
+<!ENTITY aac9a72d6a29431ed98a7fb46b1d3bd6f SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/optfls01.xml">
+<!ENTITY a111e7a3ac8950fa103856d50eff2bf6c SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/pimf.xml">
+<!ENTITY ac6ef696b465c5e791971a43e2df11995 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/plotsurf.xml">
+<!ENTITY ad31475959579b49c890431f6e7d99f4d SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/plotvar.xml">
+<!ENTITY a2fc72dc6888b5b130ccb8e57ef78d6dd SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/printrule.xml">
+<!ENTITY a760439a1eb6d2137a03358bc725ca8d7 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/psigmf.xml">
+<!ENTITY a3fe33521e337a2ee23bcd007366f9d06 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/repvec.xml">
+<!ENTITY aa77c977223ef271a1dc207ea3bcdb5c9 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/savefls.xml">
+<!ENTITY a8c7ab941a3acacd52bcae4c752424b4c SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/sciFLTEditor.xml">
+<!ENTITY afa8296849cb4ef93da33a7a2cea9f398 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/scicos_complement.xml">
+<!ENTITY ab37b3829231ab26e17738f2be5aa771f SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/scicos_fls.xml">
+<!ENTITY a53fece982f75b8865fa4aa8d05fa1e26 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/scicos_mf.xml">
+<!ENTITY a69358baa246af4c04825adfd729208ac SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/scicos_snorm.xml">
+<!ENTITY a53ddfee77aa6cf7078459aa1d4fc9fd2 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/scicos_tnorm.xml">
+<!ENTITY affd2c04d263e8bda1d9ebd783dcf9c42 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/sigmf.xml">
+<!ENTITY a98a9ea81b7fda4ddf326d28f06df890a SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/smf.xml">
+<!ENTITY a693813c6abe264c2a51fb65b99b0434e SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/snorm.xml">
+<!ENTITY a1355985b325515e55f891acba7edaeff SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/subclust.xml">
+<!ENTITY afc7a8cba997866fec2aeedc87cc18379 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/tnorm.xml">
+<!ENTITY aa7b18c0e25c8df7ae4e66a7662ff90a4 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/trapmf.xml">
+<!ENTITY a18df8c856380a9bf87a64d39963da57e SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/trimf.xml">
+<!ENTITY a53037e2440b721353d1601c10a5dd716 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/sciflt/help/en_US/zmf.xml">
+<!--End Entities-->
+]>
+<book version="5.0-subset Scilab" xml:lang="en_US"
+      xmlns="http://docbook.org/ns/docbook"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:svg="http://www.w3.org/2000/svg"
+      xmlns:mml="http://www.w3.org/1998/Math/MathML"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:db="http://docbook.org/ns/docbook">
+  <info xml:id='sciflt_manual'>
+    <title>sciFLT</title>
+  </info>
+
+<part xml:id='section_161df957ee5084fa35dfab9386dd87ac'>
+<title>sciFLT</title>
+&a6dc91565bcce3a68265de808717a8fff;
+&aeb1102e1b9df7b0a45c927effcf5b02c;
+&aa48070b85ac1ef4ecf2277d1e43a5376;
+&ae716537cb3de5dec6ea40c2712bf7a4d;
+&a9660340b11dadfe0e7c8972a0bacf359;
+&a2813e912aa8fa71c8949663ad92a2d54;
+&a696eec6f5792c1494e30da29c5eda787;
+&ae85e9ede923f7a9afc23122d72e86992;
+&aab8ce38a86009853194617e4e792f229;
+&a86bf78435f5c51114684c91a6fa29987;
+&ada0ea347a5383186b26b626de3892f91;
+&a9a6c9fa481a7a6fb512945b2aec5a5f9;
+&a57e365200a376ccbf4261f7a0378cf06;
+&aa0c23cd6e0e6ccf4cb21e64e443f3088;
+&ae135d224b508eec3d98e3c5dbec60b35;
+&a3cf6049b40f7caea58058f3493e19bcb;
+&aface93bc9ef543715db47a6445584ccc;
+&abafbfccf733a5fe25546baa0a4d1c3e1;
+&a91d711af559b60c30b54e31575f8ad7b;
+&a9599cdae80fa26cd17feb90ee13fcc32;
+&a5a622b87953e41db4491a973b7e1ef28;
+&a59339375356ef0b6ccb229f8825d2824;
+&a55ef5489248981558802be7aea15dd30;
+&a5770fab995ea3dc708f1d377d94f44c4;
+&a256b31eedbef023dbb4fc4b26ff0597b;
+&a708c900c5e97e457aa10a0146c57f08b;
+&ae48e570c6bf461d62271a7c4ef4491ff;
+&af1433b77d629cc00875551002e16d307;
+&aac9a72d6a29431ed98a7fb46b1d3bd6f;
+&a111e7a3ac8950fa103856d50eff2bf6c;
+&ac6ef696b465c5e791971a43e2df11995;
+&ad31475959579b49c890431f6e7d99f4d;
+&a2fc72dc6888b5b130ccb8e57ef78d6dd;
+&a760439a1eb6d2137a03358bc725ca8d7;
+&a3fe33521e337a2ee23bcd007366f9d06;
+&aa77c977223ef271a1dc207ea3bcdb5c9;
+&a8c7ab941a3acacd52bcae4c752424b4c;
+&afa8296849cb4ef93da33a7a2cea9f398;
+&ab37b3829231ab26e17738f2be5aa771f;
+&a53fece982f75b8865fa4aa8d05fa1e26;
+&a69358baa246af4c04825adfd729208ac;
+&a53ddfee77aa6cf7078459aa1d4fc9fd2;
+&affd2c04d263e8bda1d9ebd783dcf9c42;
+&a98a9ea81b7fda4ddf326d28f06df890a;
+&a693813c6abe264c2a51fb65b99b0434e;
+&a1355985b325515e55f891acba7edaeff;
+&afc7a8cba997866fec2aeedc87cc18379;
+&aa7b18c0e25c8df7ae4e66a7662ff90a4;
+&a18df8c856380a9bf87a64d39963da57e;
+&a53037e2440b721353d1601c10a5dd716;
+</part>
+</book>

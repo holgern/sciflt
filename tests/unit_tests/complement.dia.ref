@@ -14,54 +14,6 @@ for h=[1 5 10 100 1000 100000],
         expected = Y2;
         assert_checkalmostequal ( computed , expected , %eps*5 );
 end;
- Y2=(1-x.^h)^(1/h);
-                   !       
-at line      35 of exec file called by :    
-emp\SCI_TMP_2596_\complement.tst");
- 
-Warning: Syntax "vector ^ scalar" is obsolete. It will be removed in Scilab 6.0.
-  Use "vector .^ scalar" instead.
-
- Y2=(1-x.^h)^(1/h);
-                   !       
-at line       1 of exec file called by :    
-emp\SCI_TMP_2596_\complement.tst");
- 
-Warning: Syntax "vector ^ scalar" is obsolete. It will be removed in Scilab 6.0.
-  Use "vector .^ scalar" instead.
-
- Y2=(1-x.^h)^(1/h);
-                   !       
-at line       1 of exec file called by :    
-emp\SCI_TMP_2596_\complement.tst");
- 
-Warning: Syntax "vector ^ scalar" is obsolete. It will be removed in Scilab 6.0.
-  Use "vector .^ scalar" instead.
-
- Y2=(1-x.^h)^(1/h);
-                   !       
-at line       1 of exec file called by :    
-emp\SCI_TMP_2596_\complement.tst");
- 
-Warning: Syntax "vector ^ scalar" is obsolete. It will be removed in Scilab 6.0.
-  Use "vector .^ scalar" instead.
-
- Y2=(1-x.^h)^(1/h);
-                   !       
-at line       1 of exec file called by :    
-emp\SCI_TMP_2596_\complement.tst");
- 
-Warning: Syntax "vector ^ scalar" is obsolete. It will be removed in Scilab 6.0.
-  Use "vector .^ scalar" instead.
-
- Y2=(1-x.^h)^(1/h);
-                   !       
-at line       1 of exec file called by :    
-emp\SCI_TMP_2596_\complement.tst");
- 
-Warning: Syntax "vector ^ scalar" is obsolete. It will be removed in Scilab 6.0.
-  Use "vector .^ scalar" instead.
-
 // SUGENO CLASS
 x=linspace(0,1,1000)';
 for h=[1 5 10 100 1000 100000],

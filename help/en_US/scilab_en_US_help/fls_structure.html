@@ -1,0 +1,288 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>fls_structure</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="fcmeans.html">&lt;&lt; fcmeans</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_161df957ee5084fa35dfab9386dd87ac.html">sciFLT</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="flt_path.html">flt_path &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path" dir="ltr"><a href="index.html">sciFLT</a> &gt;&gt; <a href="section_161df957ee5084fa35dfab9386dd87ac.html">sciFLT</a> &gt; fls_structure</span>
+
+    <br /><br />
+    <div class="info"></div><div class="refnamediv"><h1 class="refname">fls_structure</h1><p class="refpurpose">Scilab Fuzzy Logic System
+  Structure</p></div>
+  
+   
+
+  
+   
+
+  
+   
+
+  
+   
+
+  
+   
+
+  
+   <div class="refsection"><h3 class="title">Description</h3>
+    
+      <p class="para">Any <code class="literal" dir="ltr">fls</code> (fuzzy logic system) used with this toolbox was
+    structured in a <code class="literal" dir="ltr">t-list</code>, and this structure is over-loaded to
+    help user manipulation.</p>
+
+    
+      <p class="para"><span><img src='./fls_structure.gif' /></span></p></div>
+
+  
+   <div class="refsection"><h3 class="title">Structure</h3>
+    
+      <p class="para">The general part have the following structure:</p>
+
+    
+      <ul class="itemizedlist"><li><p class="para"><code class="literal" dir="ltr">fls.name</code> : string, the internal tag-name.</p></li>
+
+      
+         <li><p class="para"><code class="literal" dir="ltr">fls.comment</code> : string, user&#0039;s comment.</p></li>
+
+      
+         <li><p class="para"><code class="literal" dir="ltr">fls.type</code> : string, <code class="literal" dir="ltr">&#0039;ts&#0039;</code> for
+        Takagi-Sugeno, <code class="literal" dir="ltr">&#0039;m&#0039;</code> for Mamdani.</p></li>
+
+      
+         <li><p class="para"><code class="literal" dir="ltr">fls.SNorm</code> : string, the S-Norm class type.
+        <code class="literal" dir="ltr">&#0039;dubois&#0039;</code> for Dubois-Prade, <code class="literal" dir="ltr">&#0039;yager&#0039;</code> for
+        Yager, <code class="literal" dir="ltr">&#0039;dsum&#0039;</code> for drastic sum, <code class="literal" dir="ltr">&#0039;esum&#0039;</code> for
+        Einstein sum, <code class="literal" dir="ltr">&#0039;asum&#0039;</code> for algebraic sum,
+        <code class="literal" dir="ltr">&#0039;max&#0039;</code> for maximum.</p></li>
+
+      
+         <li><p class="para"><code class="literal" dir="ltr">fls.SNormPar</code> : scalar, S-Norm class parameter. This
+        parameter is required if S-Norm class is <code class="literal" dir="ltr">&#0039;dubois&#0039;</code> or
+        <code class="literal" dir="ltr">&#0039;yager&#0039;</code>.</p></li>
+
+      
+         <li><p class="para"><code class="literal" dir="ltr">fls.TNorm</code> : string, the T-Norm class
+        type.<code class="literal" dir="ltr">&#0039;dubois&#0039;</code> for Dubois-Prade, <code class="literal" dir="ltr">&#0039;yager&#0039;</code> for
+        Yager, <code class="literal" dir="ltr">&#0039;dprod&#0039;</code> for drastic product, <code class="literal" dir="ltr">&#0039;eprod&#0039;</code>
+        for Einstein product, <code class="literal" dir="ltr">&#0039;aprod&#0039;</code> for algebraic product,
+        <code class="literal" dir="ltr">&#0039;min&#0039;</code> for minimum.</p></li>
+
+      
+         <li><p class="para"><code class="literal" dir="ltr">fls.TNormPar</code> : scalar, T-Norm class parameter.This
+        parameter is required if T-Norm class is <code class="literal" dir="ltr">&#0039;dubois&#0039;</code> or
+        <code class="literal" dir="ltr">&#0039;yager&#0039;</code>.</p></li>
+
+      
+         <li><p class="para"><code class="literal" dir="ltr">fls.Comp</code> : string, Complement class
+        type.<code class="literal" dir="ltr">&#0039;one&#0039;</code> for classical complement, <code class="literal" dir="ltr">&#0039;yager&#0039;</code>
+        for yager, <code class="literal" dir="ltr">&#0039;sugeno&#0039;</code> for sugeno.</p></li>
+
+      
+         <li><p class="para"><code class="literal" dir="ltr">fls.CompPar</code> : scalar, Complement class parameter.This
+        parameter is required if Complement class is <code class="literal" dir="ltr">&#0039;yager&#0039;</code> or
+        <code class="literal" dir="ltr">&#0039;sugeno&#0039;</code>.</p></li>
+
+      
+         <li><p class="para"><code class="literal" dir="ltr">fls.ImpMethod</code> : string, implication
+        method.<code class="literal" dir="ltr">&#0039;min&#0039;</code> for minimum or <code class="literal" dir="ltr">&#0039;prod&#0039;</code> for
+        product.</p></li>
+
+      
+         <li><p class="para"><code class="literal" dir="ltr">fls.AggMethod</code> : string, aggregation
+        method.<code class="literal" dir="ltr">&#0039;max&#0039;</code> for maximum, <code class="literal" dir="ltr">&#0039;sum&#0039;</code> for sum,
+        <code class="literal" dir="ltr">&#0039;probor&#0039;</code> for probabilistic or.</p></li>
+
+      
+         <li><p class="para"><code class="literal" dir="ltr">fls.defuzzMethod</code> : string, defuzzification
+        method.<code class="literal" dir="ltr">&#0039;centroide&#0039;</code> for centroide, <code class="literal" dir="ltr">&#0039;bisector&#0039;</code>
+        for bisector, <code class="literal" dir="ltr">&#0039;mom&#0039;</code> for mean of maximum,
+        <code class="literal" dir="ltr">&#0039;som&#0039;</code> for shortest of maximum, <code class="literal" dir="ltr">&#0039;lom&#0039;</code> for
+        largest of maximum, <code class="literal" dir="ltr">&#0039;wtaver&#0039;</code> for weigthed average,
+        <code class="literal" dir="ltr">&#0039;wtsum&#0039;</code> for weigthed sum.</p></li></ul>
+
+    
+      <p class="para"></p>
+
+    
+      <p class="para">The inputs have the following structure:</p>
+
+    
+      <ul class="itemizedlist"><li><p class="para"><code class="literal" dir="ltr">fls.input(j).name</code> : string, the tag-name of the
+        j-input variable</p></li>
+
+      
+         <li><p class="para"><code class="literal" dir="ltr">fls.input(j).range</code> : real row vector in the form
+        <code class="literal" dir="ltr">[minDom, maxDom]</code>, where <code class="literal" dir="ltr">minDom</code> means the
+        minimum value of the j-input, and, <code class="literal" dir="ltr">maxDom</code> means the
+        maximum value of the j-input.</p></li>
+
+      
+         <li><p class="para"><code class="literal" dir="ltr">fls.input(j).mf(i).name</code> : string, the tag-name of the
+        i-member function of the j-input variable.</p></li>
+
+      
+         <li><p class="para"><code class="literal" dir="ltr">fls.input(j).mf(i).type</code> : string, the type of the
+        i-member function of the j-input variable.</p></li>
+
+      
+         <li><p class="para"><code class="literal" dir="ltr">fls.input(j).mf(i).par</code> : real row vector, the
+        parameters of the i-member function of the j-input variable.</p></li></ul>
+
+    
+      <p class="para"></p>
+
+    
+      <p class="para">The outputs have the following structure:</p>
+
+    
+      <ul class="itemizedlist"><li><p class="para"><code class="literal" dir="ltr">fls.output(j).name</code> : string, the tag-name of the
+        j-output variable</p></li>
+
+      
+         <li><p class="para"><code class="literal" dir="ltr">fls.output(j).range</code> : real row vector in the form
+        <code class="literal" dir="ltr">[minDom, maxDom]</code>, where <code class="literal" dir="ltr">minDom</code> means the
+        minimum value of the j-output, and, <code class="literal" dir="ltr">maxDom</code> means the
+        maximum value of the j-output.</p></li>
+
+      
+         <li><p class="para"><code class="literal" dir="ltr">fls.output(j).mf(i).name</code> : string, the tag-name of
+        the i-member function of the j-output variable.</p></li>
+
+      
+         <li><p class="para"><code class="literal" dir="ltr">fls.output(j).mf(i).type</code> : string, the type of the
+        i-member function of the j-output variable.</p></li>
+
+      
+         <li><p class="para"><code class="literal" dir="ltr">fls.output(j).mf(i).par</code> : real row vector, the
+        parameters of the i-member function of the j-output variable.</p></li></ul>
+
+    
+      <p class="para"></p>
+
+    
+      <p class="para">The rule have the following structure:</p>
+
+    
+      <ul class="itemizedlist"><li><p class="para"><code class="literal" dir="ltr">fls.rule</code> : matrix of real with dimension
+        <code class="literal" dir="ltr">[nrule, ninputs+noutputs+2]</code>, where: <code class="literal" dir="ltr">nrules</code>
+        mean the number of rules, <code class="literal" dir="ltr">ninputs</code> the number of inputs,
+        <code class="literal" dir="ltr">noutputs</code> the number of outputs.</p></li></ul>
+
+    
+      <p class="para"></p>
+
+    
+      <p class="para">The i value of the j element in columns <code class="literal" dir="ltr">[1:ninputs]</code>
+    indicate the i-member function of the j input, if the value is negative,
+    then, the complement is applicated, if the value is 0 then, the rule no
+    take in count the input.</p>
+
+    
+      <p class="para">The i value of the j element in columns [ninputs+1:ninputs+noutpus]
+    indicate the i-member function of the j output, if the value is 0 then,
+    the rule no take in count the output.</p>
+
+    
+      <p class="para">The value of the <code class="literal" dir="ltr">[ninputs+noutputs+1]</code> indicate how the
+    rule was compound: 0 for T-Norm (OR) or 1 for S-Norm (AND).</p>
+
+    
+      <p class="para">The value of the <code class="literal" dir="ltr">[ninputs+noutputs+2]</code> indicate the weight
+    of the rule.</p></div>
+
+  
+   <div class="refsection"><h3 class="title">Examples</h3><div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabcomment">// A new fls structure</span>
+<span class="scilabid">fls</span><span class="scilaboperator">=</span><span class="scilabid">newfls</span><span class="scilabopenclose">(</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">fls</span><span class="scilaboperator">.</span><span class="scilabfield">name</span><span class="scilaboperator">=</span><span class="scilabstring">&#0034;</span><span class="scilabstring">example</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">;</span>
+<span class="scilabid">fls</span><span class="scilaboperator">.</span><span class="scilabfield">comment</span><span class="scilaboperator">=</span><span class="scilabstring">&#0034;</span><span class="scilabstring">This is an example</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">;</span>
+<span class="scilabid">fls</span><span class="scilaboperator">.</span><span class="scilabfield">TNorm</span><span class="scilaboperator">=</span><span class="scilabstring">&#0034;</span><span class="scilabstring">min</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">;</span>
+<span class="scilabid">fls</span><span class="scilaboperator">.</span><span class="scilabfield">SNorm</span><span class="scilaboperator">=</span><span class="scilabstring">&#0034;</span><span class="scilabstring">max</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">;</span>
+<span class="scilabid">fls</span><span class="scilaboperator">.</span><span class="scilabfield">Comp</span><span class="scilaboperator">=</span><span class="scilabstring">&#0034;</span><span class="scilabstring">one</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">;</span>
+<span class="scilabid">fls</span><span class="scilaboperator">.</span><span class="scilabfield">defuzzMethod</span><span class="scilaboperator">=</span><span class="scilabstring">&#0034;</span><span class="scilabstring">wtaver</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">;</span>
+<span class="scilabid">fls</span><span class="scilaboperator">=</span><span class="scilabid">addvar</span><span class="scilabopenclose">(</span><span class="scilabid">fls</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">input</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">speed</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabopenclose">[</span><span class="scilabnumber">0</span> <span class="scilabnumber">100</span><span class="scilabopenclose">]</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">fls</span><span class="scilaboperator">=</span><span class="scilabid">addmf</span><span class="scilabopenclose">(</span><span class="scilabid">fls</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">input</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">low</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">trimf</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabopenclose">[</span><span class="scilaboperator">-</span><span class="scilabnumber">50</span> <span class="scilabnumber">0</span> <span class="scilabnumber">50</span><span class="scilabopenclose">]</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">fls</span><span class="scilaboperator">=</span><span class="scilabid">addmf</span><span class="scilabopenclose">(</span><span class="scilabid">fls</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">input</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">med</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">trimf</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabopenclose">[</span><span class="scilabnumber">0</span> <span class="scilabnumber">50</span> <span class="scilabnumber">100</span><span class="scilabopenclose">]</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">fls</span><span class="scilaboperator">=</span><span class="scilabid">addmf</span><span class="scilabopenclose">(</span><span class="scilabid">fls</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">input</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">high</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">trimf</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabopenclose">[</span><span class="scilabnumber">50</span> <span class="scilabnumber">100</span> <span class="scilabnumber">150</span><span class="scilabopenclose">]</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">fls</span><span class="scilaboperator">=</span><span class="scilabid">addvar</span><span class="scilabopenclose">(</span><span class="scilabid">fls</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">output</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">actuation</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabopenclose">[</span><span class="scilabnumber">0</span> <span class="scilabnumber">1</span><span class="scilabopenclose">]</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">fls</span><span class="scilaboperator">=</span><span class="scilabid">addmf</span><span class="scilabopenclose">(</span><span class="scilabid">fls</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">output</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">run</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">constant</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabnumber">0</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">fls</span><span class="scilaboperator">=</span><span class="scilabid">addmf</span><span class="scilabopenclose">(</span><span class="scilabid">fls</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">output</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">start_to_stop</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">constant</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabnumber">0.5</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">fls</span><span class="scilaboperator">=</span><span class="scilabid">addmf</span><span class="scilabopenclose">(</span><span class="scilabid">fls</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">output</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">stop</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">constant</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+  
+   <div class="refsection"><h3 class="title">See Also</h3><ul class="itemizedlist"><li class="member"><a href="snorm.html" class="link">snorm</a></li>
+
+    
+      <li class="member"><a href="tnorm.html" class="link">tnorm</a></li>
+
+    
+      <li class="member"><a href="complement.html" class="link">complement</a></li>
+
+    
+      <li class="member"><a href="defuzzm.html" class="link">defuzzm</a></li>
+
+    
+      <li class="member"><a href="newfls.html" class="link">newfls</a></li>
+
+    
+      <li class="member"><a href="evalfls.html" class="link">evalfls</a></li>
+
+    
+      <li class="member"><a href="member_functions.html" class="link">member_functions</a></li>
+
+    
+      <li class="member"><a href="checkrule.html" class="link">checkrule</a></li>
+
+    
+      <li class="member"><a href="m2ts.html" class="link">m2ts</a></li></ul></div>
+
+  
+   <div class="refsection"><h3 class="title">Authors</h3><p class="para">Jaime Urzua Grez</p><p class="para">Holger Nahrstaedt</p></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="fcmeans.html">&lt;&lt; fcmeans</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_161df957ee5084fa35dfab9386dd87ac.html">sciFLT</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="flt_path.html">flt_path &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

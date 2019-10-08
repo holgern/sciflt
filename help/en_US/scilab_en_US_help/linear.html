@@ -1,0 +1,85 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>linear</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="inwichclust.html">&lt;&lt; inwichclust</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_161df957ee5084fa35dfab9386dd87ac.html">sciFLT</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="loadfls.html">loadfls &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path" dir="ltr"><a href="index.html">sciFLT</a> &gt;&gt; <a href="section_161df957ee5084fa35dfab9386dd87ac.html">sciFLT</a> &gt; linear</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">linear</h1>
+    <p class="refpurpose">Linear output for Takagi-Sugeno fuzzy logic systems.</p></div>
+
+
+<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
+   <div class="synopsis"><pre><span class="default">y</span><span class="default">=</span><span class="functionid">linear</span><span class="default">(</span><span class="default">x</span><span class="default">,</span><span class="default">par</span><span class="default">)</span></pre></div></div>
+
+<div class="refsection"><h3 class="title">Parameters</h3>
+   <dl><dt><span class="term">x:</span>
+      <dd><p class="para">matrix of real with size [m,n].</p></dd></dt>
+   <dt><span class="term">par:</span>
+      <dd><p class="para">row vector with n+1 elements .</p></dd></dt></dl></div>
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para"><code class="literal" dir="ltr">constant</code> compute the linear output of a Takagi-Sugeno fls
+due the evaluations of rules stored in <code class="literal" dir="ltr">x</code>. This is a util
+function.</p>
+   <p class="para">The number of parameters are equal to the number of inputs plus 1.</p>
+   <p class="para">The output have the form:
+<code class="literal" dir="ltr">y=x*par(1:n)+ones(m,1)*par(n+1)</code></p></div>
+
+<div class="refsection"><h3 class="title">See also</h3>
+   <ul class="itemizedlist"><li class="member"><a href="member_functions.html" class="link">member_functions</a></li>
+   <li class="member"><a href="mfeval.html" class="link">mfeval</a></li></ul></div>
+
+<div class="refsection"><h3 class="title">Authors</h3>
+   <ul class="itemizedlist"><li class="member">Jaime Urzua Grez</li>
+   <li class="member">Holger Nahrstaedt</li></ul></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="inwichclust.html">&lt;&lt; inwichclust</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_161df957ee5084fa35dfab9386dd87ac.html">sciFLT</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="loadfls.html">loadfls &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

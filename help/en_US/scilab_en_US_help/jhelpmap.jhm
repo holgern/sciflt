@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE map PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Map Version 1.0//EN" "http://java.sun.com/products/javahelp/map_1_0.dtd">
+<map version="1.0">
+<mapID target="index" url="index.html"/>
+<mapID target="section_161df957ee5084fa35dfab9386dd87ac" url="section_161df957ee5084fa35dfab9386dd87ac.html"/>
+<mapID target="about_FLT" url="about_FLT.html"/>
+<mapID target="addmf" url="addmf.html"/>
+<mapID target="addrule" url="addrule.html"/>
+<mapID target="addvar" url="addvar.html"/>
+<mapID target="checkrule" url="checkrule.html"/>
+<mapID target="complement" url="complement.html"/>
+<mapID target="constant" url="constant.html"/>
+<mapID target="defuzzm" url="defuzzm.html"/>
+<mapID target="delmf" url="delmf.html"/>
+<mapID target="delvar" url="delvar.html"/>
+<mapID target="dsigmf" url="dsigmf.html"/>
+<mapID target="editfls" url="editfls.html"/>
+<mapID target="evalfls" url="evalfls.html"/>
+<mapID target="fcmeans" url="fcmeans.html"/>
+<mapID target="fls_structure" url="fls_structure.html"/>
+<mapID target="flt_path" url="flt_path.html"/>
+<mapID target="fuzzapp" url="fuzzapp.html"/>
+<mapID target="gauss2mf" url="gauss2mf.html"/>
+<mapID target="gaussmf" url="gaussmf.html"/>
+<mapID target="gbellmf" url="gbellmf.html"/>
+<mapID target="importfis" url="importfis.html"/>
+<mapID target="inwichclust" url="inwichclust.html"/>
+<mapID target="linear" url="linear.html"/>
+<mapID target="loadfls" url="loadfls.html"/>
+<mapID target="m2ts" url="m2ts.html"/>
+<mapID target="member_functions" url="member_functions.html"/>
+<mapID target="mfeval" url="mfeval.html"/>
+<mapID target="newfls" url="newfls.html"/>
+<mapID target="optfls01" url="optfls01.html"/>
+<mapID target="pimf" url="pimf.html"/>
+<mapID target="plotsurf" url="plotsurf.html"/>
+<mapID target="plotvar" url="plotvar.html"/>
+<mapID target="printrule" url="printrule.html"/>
+<mapID target="psigmf" url="psigmf.html"/>
+<mapID target="repvec" url="repvec.html"/>
+<mapID target="savefls" url="savefls.html"/>
+<mapID target="sciFLTEditor" url="sciFLTEditor.html"/>
+<mapID target="scicos_complement" url="scicos_complement.html"/>
+<mapID target="scicos_fls" url="scicos_fls.html"/>
+<mapID target="scicos_mf" url="scicos_mf.html"/>
+<mapID target="scicos_snorm" url="scicos_snorm.html"/>
+<mapID target="scicos_tnorm" url="scicos_tnorm.html"/>
+<mapID target="sigmf" url="sigmf.html"/>
+<mapID target="smf" url="smf.html"/>
+<mapID target="snorm" url="snorm.html"/>
+<mapID target="subclust" url="subclust.html"/>
+<mapID target="tnorm" url="tnorm.html"/>
+<mapID target="trapmf" url="trapmf.html"/>
+<mapID target="trimf" url="trimf.html"/>
+<mapID target="zmf" url="zmf.html"/>
+</map>

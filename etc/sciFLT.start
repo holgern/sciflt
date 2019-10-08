@@ -12,16 +12,16 @@ function sciFLTlib = sciFLT_load()
     TOOLBOX_NAME = "sciFLT"
     TOOLBOX_TITLE = "Fuzzy Toolbox"
 
-    mprintf("Start %s 0.4.6\n",TOOLBOX_TITLE);
-    
-    // check minimal version (xcosPal required)
-// =============================================================================
-  if ~isdef('xcosPal') then
-    // and xcos features required
-    error(gettext('Scilab 5.3.2 or more is required.'));
-  end
+    mprintf("Start %s 0.5\n",TOOLBOX_TITLE);
 
-// =============================================================================
+    // check minimal version (xcosPal required)
+    // =============================================================================
+    if ~isdef('xcosPal') then
+        // and xcos features required
+        error(gettext('Scilab 5.3.2 or more is required.'));
+    end
+
+    // =============================================================================
     etc_tlbx  = get_absolute_file_path(TOOLBOX_NAME+".start");
     etc_tlbx  = getshortpathname(etc_tlbx);
     root_tlbx = strncpy( etc_tlbx, length(etc_tlbx)-length("\etc\") );
@@ -32,17 +32,18 @@ function sciFLTlib = sciFLT_load()
     mprintf("\tLoad macros\n");
     pathmacros = pathconvert( root_tlbx ) + "macros" + filesep();
     sciFLTlib  = lib(pathmacros);
+    //exec(pathmacros + 'editfls_viewrule.sci');
     clear pathmacros;
-    
+
     // load shared library
     // =============================================================================
     if ( %t ) then
-	mprintf("\tLoad shared library\n");
-	ilib_verbose(0);
-	//exec(pathconvert(root_tlbx+"/src/fortran/loader.sce",%f));
-
-	exec(pathconvert(root_tlbx+"/src/c/loader.sce",%f));
-	//exec(pathconvert(root_tlbx+"/src/fortran/loader.sce",%f));
+        mprintf("\tLoad shared library\n");
+        ilib_verbose(0);
+        //exec(pathconvert(root_tlbx+"/src/c_scilab/loader.sce",%f));
+        //pause
+        exec(pathconvert(root_tlbx+"/src/c_xcos/loader.sce",%f));
+        //exec(pathconvert(root_tlbx+"/src/fortran/loader.sce",%f));
     end
     // load gateways
     // =============================================================================
@@ -52,7 +53,7 @@ function sciFLTlib = sciFLT_load()
         ilib_verbose(0);
         exec( pathconvert(root_tlbx+"/sci_gateway/loader_gateway.sce",%f));
     end
-    
+
     // load xcos libraries
     // =============================================================================
     loadXcosLibs();
@@ -61,34 +62,49 @@ function sciFLTlib = sciFLT_load()
     // =============================================================================
     // Add blocks to the Xcos palette
     // =============================================================================
-      mprintf("\tLoad palette\n");
-      pal = xcosPal(TOOLBOX_NAME);
+    mprintf("\tLoad palette\n");
+    pal = xcosPal(TOOLBOX_NAME);
 
-      h5Files = gsort(ls(root_tlbx + "/images/h5/*.sod"));
-      gifFiles = gsort(ls(root_tlbx + "/images/gif/*." + ["png" "jpg" "gif"]));
-      svgFiles = gsort(ls(root_tlbx + "/images/svg/*." + ["svg" "png" "jpg" "gif"]));
+    h5Files = gsort(ls(root_tlbx + "/images/h5/*.sod"));
+    gifFiles = gsort(ls(root_tlbx + "/images/gif/*." + ["png" "jpg" "gif"]));
+    svgFiles = gsort(ls(root_tlbx + "/images/svg/*." + ["svg" "png" "jpg" "gif"]));
 
-      for i=1:size(h5Files, "*")
-	pal = xcosPalAddBlock(pal, h5Files(i), gifFiles(i), svgFiles(i));
-      end
+    for i=1:size(h5Files, "*")
+        pal = xcosPalAddBlock(pal, h5Files(i), gifFiles(i), svgFiles(i));
+    end
 
-      if ~xcosPalAdd(pal) then   //,[TOOLBOX_NAME,"Blocks"]) then
-	error(msprintf(gettext("%s: Unable to export %s.\n"), "sciFLT.start", "pal"));
-      end
-  
-  
+    if ~xcosPalAdd(pal) then   //,[TOOLBOX_NAME,"Blocks"]) then
+        error(msprintf(gettext("%s: Unable to export %s.\n"), "sciFLT.start", "pal"));
+    end
+
+
 
     //Set TCL
     // =============================================================================
-    TCL_SetVar("sciFLTpath", pathconvert( root_tlbx ));
-    TCL_SetVar("sciFLTpath_temp",strsubst(TMPDIR,"\","/"));
-    TCL_EvalFile(pathconvert( root_tlbx )+"gui/plotsurf.tcl");
-    TCL_EvalFile(pathconvert( root_tlbx )+"gui/demos_examples.tcl");
-    TCL_EvalFile(pathconvert( root_tlbx )+"gui/scicos_param.tcl");
-    TCL_EvalFile(pathconvert( root_tlbx )+"gui/flteditor.tcl");
-    TCL_EvalFile(pathconvert( root_tlbx )+"gui/fuzzy_editor.tcl");
 
-    
+    if (getos() ~= "Darwin") then
+        TCL_SetVar("sciFLTpath", pathconvert( root_tlbx ));
+        TCL_SetVar("sciFLTpath_temp",strsubst(TMPDIR,"\","/"));
+        TCL_EvalFile(pathconvert( root_tlbx )+"gui/plotsurf.tcl");
+        TCL_EvalFile(pathconvert( root_tlbx )+"gui/demos_examples.tcl");
+        TCL_EvalFile(pathconvert( root_tlbx )+"gui/scicos_param.tcl");
+        TCL_EvalFile(pathconvert( root_tlbx )+"gui/flteditor.tcl");
+        TCL_EvalFile(pathconvert( root_tlbx )+"gui/fuzzy_editor.tcl");
+    else
+        try
+            TCL_SetVar("sciFLTpath", pathconvert( root_tlbx ));
+            TCL_SetVar("sciFLTpath_temp",strsubst(TMPDIR,"\","/"));
+            TCL_EvalFile(pathconvert( root_tlbx )+"gui/plotsurf.tcl");
+            TCL_EvalFile(pathconvert( root_tlbx )+"gui/demos_examples.tcl");
+            TCL_EvalFile(pathconvert( root_tlbx )+"gui/scicos_param.tcl");
+            TCL_EvalFile(pathconvert( root_tlbx )+"gui/flteditor.tcl");
+            TCL_EvalFile(pathconvert( root_tlbx )+"gui/fuzzy_editor.tcl");
+        catch
+            disp("The Scilab version on this Mac does not support TCL/TK, sciFLT loaded with less GUI supports.")
+        end
+
+    end
+
     //TCL_EvalStr('cd '+pathconvert( root_tlbx )+"gui");
     //TCL_EvalStr('source flteditor.tcl');
     //TCL_EvalStr('fltEditInit '+pathconvert( root_tlbx )+"gui");
@@ -125,8 +141,12 @@ function sciFLTlib = sciFLT_load()
     // A Welcome message.
 
     //mprintf("\tType ""help hypt_overview"" for quick start.\n");
-    mprintf("\tType ""sciFLTdemo"" to see demos and examples..\n");
-
+    if (getos() ~= "Darwin") then
+        mprintf("\tType ""sciFLTdemo"" to see demos and examples..\n");
+    else
+        mprintf("\tNotes: GUI with tcl/tk is not available for MacOS..\n");
+    end
+    
 endfunction 
 
 if ( isdef("sciFLTlib") ) then

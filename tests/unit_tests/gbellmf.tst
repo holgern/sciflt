@@ -18,7 +18,7 @@ for c=[-100 -50 -10 -1 0],
 			computed = Y1;
 			expected = Y2;
 
-			assert_checkalmostequal ( computed , expected , %eps, %eps*100);	
+			assert_checkalmostequal ( computed , expected , %eps);	
 		end
 	end
 end

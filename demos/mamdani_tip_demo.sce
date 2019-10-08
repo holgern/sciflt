@@ -35,9 +35,8 @@ fis=importfis (demo_path+'/mamdani_tip_calculator');
 scf();plotvar (fis, 'input', [1 2]);
 scf();plotvar (fis, 'output', [1, 2]);
 
-
 // Plot the Tip and Check + Tip as functions of Food-Quality and Service.
-scf();plotsurf (fis, [1 2], 1,[0 0]);
+scf();plotsurf (fis, [1 2], 1, [0 0]);
 scf();plotsurf (fis, [1 2], 2, [0 0]);
 
 // Calculate the Tip and Check + Tip using (Food-Quality, Service) = (4, 6).
@@ -53,7 +52,7 @@ plot (x_axis, fuzzy_output(:, 1), "b", 'LineWidth', 2);
 crisp_output = mfeval(x_axis, 'constant', output(1));
 
 plot ([crisp_output,crisp_output], [0 1], "r", 'LineWidth', 2);
-legend(";Aggregated Fuzzy Output;","Crisp Output = " string(output(1)) "%;"];
+legend([";Aggregated Fuzzy Output;","Crisp Output = " string(output(1)) "%;"]);
 //ylim ([-0.1, 1.1]);
 xlabel ('Tip', 'FontWeight', 'bold');
 xgrid();

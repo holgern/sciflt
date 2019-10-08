@@ -1010,18 +1010,23 @@ proc sciFLTEditorNewFls { type } {
 	set sciFLTEditorTable($idx,name) "NewName"
 	set sciFLTEditorTable($idx,comment) "NewComment"
 	set sciFLTEditorTable($idx,type) $type
-	set sciFLTEditorTable($idx,snorm) "asum"
 	set sciFLTEditorTable($idx,snormpar) 0
-	set sciFLTEditorTable($idx,tnorm) "aprod"
 	set sciFLTEditorTable($idx,tnormpar) 0
 	set sciFLTEditorTable($idx,comp) "one"
 	set sciFLTEditorTable($idx,comppar) 0
-	set sciFLTEditorTable($idx,impmethod) "prod"
-	set sciFLTEditorTable($idx,aggmethod) "max"
 	if { $type=="ts" } then {
 		set sciFLTEditorTable($idx,defuzzmethod) "wtsum"
+		set sciFLTEditorTable($idx,snorm) "asum"		
+		set sciFLTEditorTable($idx,tnorm) "aprod"
+		set sciFLTEditorTable($idx,impmethod) "prod"
+		set sciFLTEditorTable($idx,aggmethod) "max"
+		
 	} else {
 		set sciFLTEditorTable($idx,defuzzmethod) "centroide"
+		set sciFLTEditorTable($idx,snorm) "max"
+		set sciFLTEditorTable($idx,tnorm) "min"
+		set sciFLTEditorTable($idx,impmethod) "min"
+		set sciFLTEditorTable($idx,aggmethod) "max"
 	}	
 	set sciFLTEditorTable($idx,input,is_open) 0
 	set sciFLTEditorTable($idx,input,tidx) ""	
@@ -1505,7 +1510,19 @@ proc sciFLTEditorSurf { } {
 	global sciFLTPlotSurfTable
 	global sciFLTEditorTable
 	global sciFLTpath
+
+	set sciFLTEditorTable(scilabname) "flt_tmp"
+	set idx [lindex $sciFLTEditorTable(curIdx) 0]
+	set filename "fls_$sciFLTEditorTable(curfileidx).fls"
+	set filename [file join $sciFLTEditorTable(tmpdir) $filename]
+	sciFLTEditorSaveFLS $filename $idx	
+	catch { ScilabEval "$sciFLTEditorTable(scilabname)=loadfls(\"$filename\");" }
+	catch { destroy ".sciFLTEditorExportToScilab" }
+
+
+
 	if { $sciFLTEditorTable(curright)!="" } then {
+
 		destroy $sciFLTEditorTable(curright)	
 		set w $sciFLTEditorTable(winname).center.right.surfplot
 		frame $w
@@ -1553,6 +1570,28 @@ proc sciFLTEditorPlotVar { } {
 		}
 	}
 }
+
+
+# ------------------------------------------------------------------------------------------------------------------
+# View Rules (added by Tan CL 28-Jan-2014)
+# ------------------------------------------------------------------------------------------------------------------
+proc sciFLTEditorViewRule { } {
+	global sciFLTEditorTable
+	#sciFLTEditorTable(tmpdir)
+	if { $sciFLTEditorTable(curIdx)!="" } then {
+		# EXPRT THE CURRENT STRUCTURE TO A FILE
+		set idx [lindex $sciFLTEditorTable(curIdx) 0]
+		set idx2 [lindex $sciFLTEditorTable(curIdx) 1]
+		if { $idx2==2 | $idx2==3 } then {
+			set filename "fls_$sciFLTEditorTable(curfileidx).fls"
+			set filename [file join $sciFLTEditorTable(tmpdir) $filename]
+			incr sciFLTEditorTable(curfileidx)
+			sciFLTEditorSaveFLS $filename $idx
+			catch { ScilabEval "editfls_viewrule(\"$filename\");" }
+		}
+	}
+}
+
 
 # ------------------------------------------------------------------------------------------------------------------
 # DO A BLANK PAGE
@@ -1689,7 +1728,8 @@ proc sciFLTEditor { {filename ""} {deleteit no} } {
 		$m add command -label "Outputs"     -command "sciFLTEditorChangeView 3"
 		$m add command -label "Plot Current Var"    -command "sciFLTEditorPlotVar"
 		$m add command -label "Rules"       -command "sciFLTEditorChangeView 4"
-		#$m add command -label "Surface"     -command "sciFLTEditorSurf"
+		$m add command -label "Surface"     -command "sciFLTEditorSurf"
+		$m add command -label "View Rules"     -command "sciFLTEditorViewRule"
 
 		set m $w.menu.help
 		menu $m -tearoff 0

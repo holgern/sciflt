@@ -1,0 +1,9 @@
+LIBRARY    libsciFLT_c_xcos.dll
+EXPORTS
+	scomplement
+	sfls
+	smfeval
+	ssnorm
+	stnorm
+	sciFLT_doerror
+	fltcd_

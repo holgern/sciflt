@@ -1,0 +1,104 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>addmf</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="about_FLT.html">&lt;&lt; about_FLT</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_161df957ee5084fa35dfab9386dd87ac.html">sciFLT</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="addrule.html">addrule &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path" dir="ltr"><a href="index.html">sciFLT</a> &gt;&gt; <a href="section_161df957ee5084fa35dfab9386dd87ac.html">sciFLT</a> &gt; addmf</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">addmf</h1>
+    <p class="refpurpose">Add a new member function to a fls structure</p></div>
+
+
+<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
+   <div class="synopsis"><pre><span class="default">fls</span><span class="default">=</span><span class="functionid">addmf</span><span class="default">( </span><span class="default">fls_input</span><span class="default">, </span><span class="default">input_output</span><span class="default"> , </span><span class="default">var_index</span><span class="default"> , </span><span class="default">mf_name</span><span class="default"> , </span><span class="default">mf_type</span><span class="default"> , </span><span class="default">mf_par</span><span class="default"> )</span></pre></div></div>
+
+<div class="refsection"><h3 class="title">Parameters</h3>
+   <dl><dt><span class="term">fls_input:</span>
+      <dd><p class="para">fuzzy logic system (as input).</p></dd></dt>
+   <dt><span class="term">fls:</span>
+      <dd><p class="para">fuzzy logic system (as output).</p></dd></dt>
+   <dt><span class="term">input_output:</span>
+      <dd><p class="para">string. <code class="literal" dir="ltr">&#0034;input&#0034;</code> for input variable,  <code class="literal" dir="ltr">&#0034;output&#0034;</code> for output variable.</p></dd></dt>
+   <dt><span class="term">var_index:</span>
+      <dd><p class="para">integer. Variable number.</p></dd></dt>
+   <dt><span class="term">mf_name:</span>
+      <dd><p class="para">string. Member function tag-name</p></dd></dt>
+   <dt><span class="term">mf_type:</span>
+      <dd><p class="para">string. Member function type.</p></dd></dt>
+   <dt><span class="term">mf_par:</span>
+      <dd><p class="para">row vector of reals. Member function parameters.</p></dd></dt></dl></div>
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para"><code class="literal" dir="ltr">addmf</code> add a new member function to fuzzy logic system
+<code class="literal" dir="ltr">fls_input</code> and return it with this change as <code class="literal" dir="ltr">fls</code>.
+This command only add the member function named <code class="literal" dir="ltr">mf_name</code> with
+type <code class="literal" dir="ltr">mf_type</code> and parameters <code class="literal" dir="ltr">mf_par</code> if the
+variable <code class="literal" dir="ltr">var_index</code> exist as input or output (depends of
+<code class="literal" dir="ltr">input_output</code> parameter).</p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">fls</span><span class="scilaboperator">=</span><span class="scilabid">newfls</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">m</span><span class="scilabstring">&#0034;</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">fls</span><span class="scilaboperator">=</span><span class="scilabid">addvar</span><span class="scilabopenclose">(</span><span class="scilabid">fls</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">input</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">speed</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabopenclose">[</span><span class="scilabnumber">0</span> <span class="scilabnumber">100</span><span class="scilabopenclose">]</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">fls</span><span class="scilaboperator">=</span><span class="scilabid">addmf</span><span class="scilabopenclose">(</span><span class="scilabid">fls</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">input</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">low</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">trimf</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabopenclose">[</span><span class="scilaboperator">-</span><span class="scilabnumber">50</span> <span class="scilabnumber">0</span> <span class="scilabnumber">50</span><span class="scilabopenclose">]</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">fls</span><span class="scilaboperator">=</span><span class="scilabid">addmf</span><span class="scilabopenclose">(</span><span class="scilabid">fls</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">input</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">med</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">trimf</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabopenclose">[</span><span class="scilabnumber">0</span> <span class="scilabnumber">50</span> <span class="scilabnumber">100</span><span class="scilabopenclose">]</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">fls</span><span class="scilaboperator">=</span><span class="scilabid">addmf</span><span class="scilabopenclose">(</span><span class="scilabid">fls</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">input</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">high</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">trimf</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabopenclose">[</span><span class="scilabnumber">50</span> <span class="scilabnumber">100</span> <span class="scilabnumber">150</span><span class="scilabopenclose">]</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">plotvar</span><span class="scilabopenclose">(</span><span class="scilabid">fls</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">input</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">See also</h3>
+   <ul class="itemizedlist"><li class="member"><a href="addvar.html" class="link">addvar</a></li>
+   <li class="member"><a href="delvar.html" class="link">delvar</a></li>
+   <li class="member"><a href="delmf.html" class="link">delmf</a></li></ul></div>
+
+<div class="refsection"><h3 class="title">Authors</h3>
+   <ul class="itemizedlist"><li class="member">Jaime Urzua Grez</li>
+   <li class="member">Holger Nahrstaedt</li></ul></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="about_FLT.html">&lt;&lt; about_FLT</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_161df957ee5084fa35dfab9386dd87ac.html">sciFLT</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="addrule.html">addrule &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

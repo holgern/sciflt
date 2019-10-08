@@ -70,7 +70,7 @@ for npart=[3 5 10 15 20],
 	plot3d(x1,x2,E2,30,70,"x1@x2@y",[5 1 4],[-%pi %pi -%pi %pi 0 m1]);
 	h.visible="on";
 	// wait 2 seconds
-	xpause(2e6);
+	sleep(2000);
 end
 write(%io(2),"The end");
 write(%io(2),"");

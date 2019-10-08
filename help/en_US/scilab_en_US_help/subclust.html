@@ -1,0 +1,100 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>subclust</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="snorm.html">&lt;&lt; snorm</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_161df957ee5084fa35dfab9386dd87ac.html">sciFLT</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="tnorm.html">tnorm &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path" dir="ltr"><a href="index.html">sciFLT</a> &gt;&gt; <a href="section_161df957ee5084fa35dfab9386dd87ac.html">sciFLT</a> &gt; subclust</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">subclust</h1>
+    <p class="refpurpose">Find cluster centers with substractive clustering.</p></div>
+
+
+<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
+   <div class="synopsis"><pre><span class="default">[</span><span class="default">centers</span><span class="default">,</span><span class="default">sigmas</span><span class="default">]=</span><span class="functionid">subclust</span><span class="default">(</span><span class="default">X</span><span class="default"> [,</span><span class="default">r</span><span class="default"> [, </span><span class="default">opt</span><span class="default"> ]])</span></pre></div></div>
+
+<div class="refsection"><h3 class="title">Parameters</h3>
+   <dl><dt><span class="term">X:</span>
+      <dd><p class="para">matrix of reals.The pairs of inputs points.</p></dd></dt>
+   <dt><span class="term">r:</span>
+      <dd><p class="para">real vector of real.</p></dd></dt>
+   <dt><span class="term">opt:</span>
+      <dd><p class="para">[1x3] vector of real.</p></dd></dt>
+   <dt><span class="term">centers:</span>
+      <dd><p class="para">integer, maximum number of iterations. The defaul value is 100</p></dd></dt>
+   <dt><span class="term">sigmas:</span>
+      <dd><p class="para">scalar, minimum change value between two consecutive iterations. The default value is 0.001</p></dd></dt></dl></div>
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para"></p>
+   <p class="para"><b>subclust</b> find cluster centers with substractive clustering for
+a matrix <b>X</b> in which each row contains a data point. r is a vector
+that specifies a cluster center&#0039;s range of influence in each of the data
+dimensions, assuming the data falls within a unit hyperbox (internalli
+relized).</p>
+   <p class="para"><b>opt=[ACCEPT_RATIO, REJECT_RATIO, REDUCTION_RATIO]</b>. If opt is
+not provided, then the routine use the followings: ACCEPT_RATIO=0.5,
+REJECT_RATIO=0.15, REDUCTION_RATIO=1.5.</p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabcomment">// Take 400 random pairs of points centered at (0,0), (3,3), (7,7) and (10,10)</span>
+<span class="scilabid">Xin</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><a class="scilabcommand" href="scilab://rand">rand</a><span class="scilabopenclose">(</span><span class="scilabnumber">100</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span><span class="scilabnumber">3</span><span class="scilaboperator">+</span><a class="scilabcommand" href="scilab://rand">rand</a><span class="scilabopenclose">(</span><span class="scilabnumber">100</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span><span class="scilabnumber">7</span><span class="scilaboperator">+</span><a class="scilabcommand" href="scilab://rand">rand</a><span class="scilabopenclose">(</span><span class="scilabnumber">100</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span><span class="scilabnumber">10</span><span class="scilaboperator">+</span><a class="scilabcommand" href="scilab://rand">rand</a><span class="scilabopenclose">(</span><span class="scilabnumber">100</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabcomment">// Find clusters</span>
+<span class="scilabid">centers</span><span class="scilaboperator">=</span><span class="scilabid">subclust</span><span class="scilabopenclose">(</span><span class="scilabid">Xin</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">See also</h3>
+   <ul class="itemizedlist"><li class="member"><a href="fcmeans.html" class="link">fcmeans</a></li>
+   <li class="member"><a href="inwichclust.html" class="link">inwichclust</a></li></ul></div>
+
+<div class="refsection"><h3 class="title">Authors</h3>
+   <ul class="itemizedlist"><li class="member">Jaime Urzua Grez</li>
+   <li class="member">Holger Nahrstaedt</li></ul></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="snorm.html">&lt;&lt; snorm</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_161df957ee5084fa35dfab9386dd87ac.html">sciFLT</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="tnorm.html">tnorm &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

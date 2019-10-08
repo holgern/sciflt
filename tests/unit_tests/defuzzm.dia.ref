@@ -14,7 +14,7 @@ computed = Y1
  expected  =
  
     5.0070985  
-assert_checkalmostequal ( computed , expected , %eps, %eps*100);
+assert_checkalmostequal ( computed , expected , %eps);
 	
 	
 	
@@ -39,7 +39,7 @@ expected = Y2
  expected  =
  
     4.964965  
-assert_checkalmostequal ( computed , expected , %eps, %eps*10);
+assert_checkalmostequal ( computed , expected , %eps);
 // MEAN OF MAXIMUM
 x=linspace(0,10,1000)';
 y0=rand(200,1);
@@ -57,7 +57,7 @@ expected = Y2
  expected  =
  
     5.1951952  
-assert_checkalmostequal ( computed , expected , %eps, %eps*10);
+assert_checkalmostequal ( computed , expected , %eps);
 	
 // LARGEST OF MAXIMUM
 x=linspace(0,10,1000)';
@@ -77,7 +77,7 @@ expected = Y2
  expected  =
  
     8.4584585  
-assert_checkalmostequal ( computed , expected , %eps, %eps*10);
+assert_checkalmostequal ( computed , expected , %eps);
 	
 // SHORTEST OF MAXIMUM
 x=linspace(0,10,1000)';
@@ -97,4 +97,4 @@ expected = Y2
  expected  =
  
     1.7717718  
-assert_checkalmostequal ( computed , expected , %eps, %eps*10);
+assert_checkalmostequal ( computed , expected , %eps);

@@ -1,0 +1,97 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>addrule</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="addmf.html">&lt;&lt; addmf</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_161df957ee5084fa35dfab9386dd87ac.html">sciFLT</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="addvar.html">addvar &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path" dir="ltr"><a href="index.html">sciFLT</a> &gt;&gt; <a href="section_161df957ee5084fa35dfab9386dd87ac.html">sciFLT</a> &gt; addrule</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">addrule</h1>
+    <p class="refpurpose">Add a new member function to a fls structure</p></div>
+
+
+<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
+   <div class="synopsis"><pre><span class="default">fls</span><span class="default">=</span><span class="functionid">addrule</span><span class="default">(</span><span class="default">fls_input</span><span class="default">,</span><span class="default">rule_matrix</span><span class="default">)</span></pre></div></div>
+
+<div class="refsection"><h3 class="title">Parameters</h3>
+   <dl><dt><span class="term">fls_input:</span>
+      <dd><p class="para">fuzzy logic system (as input).</p></dd></dt>
+   <dt><span class="term">fls:</span>
+      <dd><p class="para">fuzzy logic system (as output).</p></dd></dt>
+   <dt><span class="term">rule_matrix:</span>
+      <dd><p class="para">each row of the rule matrix represents one rule and has the form [in1_mf ... inM_mf out1_mf ... outN_mf  connect weight]</p></dd></dt>
+   <dt><span class="term">where:</span>
+      <dd><p class="para"></p></dd></dt></dl></div>
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para">To express:</p>
+   <p class="para">&#0034;not&#0034; -- prepend a minus sign to the membership function index</p>
+   <p class="para">&#0034;somewhat&#0034; -- append &#0034;.05&#0034; to the membership function index</p>
+   <p class="para">&#0034;very&#0034; -- append &#0034;.20&#0034; to the membership function index</p>
+   <p class="para">&#0034;extremely&#0034; -- append &#0034;.30&#0034; to the membership function index</p>
+   <p class="para">&#0034;very very&#0034; -- append &#0034;.40&#0034; to the membership function index</p>
+   <p class="para">To omit an input or output, use 0 for the membership function index.
+The consequent connective is always &#0034;and&#0034;.</p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabcomment">//   If (input_1 is mf_2) or (input_3 is not mf_1) or (input_4 is very mf_1),</span>
+<span class="scilabcomment">//    then (output_1 is mf_2) and (output_2 is mf_1^0.3).</span>
+<span class="scilabcomment">//    fls=addrule(fls,[2 0 -1 4.2 2 1.03 0 1]);</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">See also</h3>
+   <ul class="itemizedlist"><li class="member"><a href="addvar.html" class="link">addvar</a></li>
+   <li class="member"><a href="delvar.html" class="link">delvar</a></li>
+   <li class="member"><a href="delmf.html" class="link">delmf</a></li></ul></div>
+
+<div class="refsection"><h3 class="title">Authors</h3>
+   <ul class="itemizedlist"><li class="member">Jaime Urzua Grez</li>
+   <li class="member">Holger Nahrstaedt</li></ul></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="addmf.html">&lt;&lt; addmf</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_161df957ee5084fa35dfab9386dd87ac.html">sciFLT</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="addvar.html">addvar &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

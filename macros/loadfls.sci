@@ -86,6 +86,18 @@ varot=list();
 
 while (meof(fd)==0),
 	txt=mgetl(fd,1);
+
+    if isempty(txt);
+        eof_cnt = eof_cnt + 1;
+        if eof_cnt > 10;
+            break;
+        end
+        
+    else
+        eof_cnt = 0;
+    end
+    
+    
 	if (txt==[]) then txt=""; end;
 
 	// FIND PART

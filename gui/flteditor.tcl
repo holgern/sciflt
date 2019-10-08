@@ -452,11 +452,9 @@ proc fltEdit { } {
 	set p 0
 	foreach x $buttons { 
 		if { [lindex $x 0]=="sep" } then {
-			#button $w.top.b$p -image fltEditTable(icon,[lindex $x 0]) -command [lindex $x 1] -relief flat -state disable
-			button $w.top.b$p  -command [lindex $x 1] -relief flat -state disable
+			button $w.top.b$p -image fltEditTable(icon,[lindex $x 0]) -command [lindex $x 1] -relief flat -state disable
 		} else {
-			#button $w.top.b$p -image fltEditTable(icon,[lindex $x 0]) -command [lindex $x 1] -relief groove -state normal
-			button $w.top.b$p  -command [lindex $x 1] -relief groove -state normal
+			button $w.top.b$p -image fltEditTable(icon,[lindex $x 0]) -command [lindex $x 1] -relief groove -state normal
 		}
 		bind $w.top.b$p <Motion> "fltEditUpdateInfo [lindex $x 2]"
 		bind $w.top.b$p <Leave> "fltEditUpdateInfo 0"

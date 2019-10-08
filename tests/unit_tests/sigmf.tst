@@ -10,6 +10,6 @@ for a=linspace(-1,1,10),
 		computed = Y1;
 		expected = Y2;
 
-		assert_checkalmostequal ( computed , expected , %eps,%eps*10);		
+		assert_checkalmostequal ( computed , expected , %eps);		
 	end
 end

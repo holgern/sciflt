@@ -1,0 +1,102 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>snorm</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="smf.html">&lt;&lt; smf</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_161df957ee5084fa35dfab9386dd87ac.html">sciFLT</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="subclust.html">subclust &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path" dir="ltr"><a href="index.html">sciFLT</a> &gt;&gt; <a href="section_161df957ee5084fa35dfab9386dd87ac.html">sciFLT</a> &gt; snorm</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">snorm</h1>
+    <p class="refpurpose">Fuzzy Logic S-Norm (OR)</p></div>
+
+
+<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
+   <div class="synopsis"><pre><span class="default">y</span><span class="default">=</span><span class="functionid">snorm</span><span class="default">( </span><span class="default">x</span><span class="default"> , </span><span class="default">class</span><span class="default"> [,</span><span class="default">class_par</span><span class="default">] )</span></pre></div></div>
+
+<div class="refsection"><h3 class="title">Parameters</h3>
+   <dl><dt><span class="term">x:</span>
+      <dd><p class="para">matrix of real with size [m,n].</p></dd></dt>
+   <dt><span class="term">y:</span>
+      <dd><p class="para">matrix of real with size [m,1].</p></dd></dt>
+   <dt><span class="term">class:</span>
+      <dd><p class="para">string, s-norm class. The values can be: &#0034;dubois&#0034; for Dubois-Prade S-Norm, &#0034;yager&#0034; for Yager S-Norm, &#0034;dsum&#0034; for drastic sum S-Norm, &#0034;esum&#0034; for Einstein sum S-Norm, &#0034;asum&#0034; for algebraic sum S-Norm, &#0034;max&#0034; for maximum S-Norm.</p></dd></dt>
+   <dt><span class="term">class_par:</span>
+      <dd><p class="para">scalar, S-Norm class parameter. &#0034;dubois&#0034; and &#0034;yager&#0034; class need this parameter.</p></dd></dt></dl></div>
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para"><code class="literal" dir="ltr">snom</code> compute S-Norm <code class="literal" dir="ltr">class</code> of <code class="literal" dir="ltr">x</code>
+with parameter <code class="literal" dir="ltr">class_par</code>. The calculation was made taking the
+j row of <code class="literal" dir="ltr">x</code> as input and put the resulting value in the j row
+of <code class="literal" dir="ltr">y</code> (row oriented calculation).</p>
+   <p class="para"><code class="literal" dir="ltr">&#0034;dubois&#0034;</code> class need <code class="literal" dir="ltr">0&amp;lt;=class_par&amp;lt;=1</code>.
+<code class="literal" dir="ltr">&#0034;yager&#0034;</code>class need <code class="literal" dir="ltr">class_par&amp;gt;0</code>.</p>
+   <p class="para"><span><img src='./snorm.gif' /></span></p>
+   <p class="para"></p>
+   <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">x</span><span class="scilaboperator">=</span><a class="scilabcommand" href="scilab://rand">rand</a><span class="scilabopenclose">(</span><span class="scilabnumber">5</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">y1</span><span class="scilaboperator">=</span><span class="scilabid">snorm</span><span class="scilabopenclose">(</span><span class="scilabid">x</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">dubois</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabnumber">0.5</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">y2</span><span class="scilaboperator">=</span><span class="scilabid">snorm</span><span class="scilabopenclose">(</span><span class="scilabid">x</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">yager</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">y3</span><span class="scilaboperator">=</span><span class="scilabid">snorm</span><span class="scilabopenclose">(</span><span class="scilabid">x</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">dsum</span><span class="scilabstring">&#0034;</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">y4</span><span class="scilaboperator">=</span><span class="scilabid">snorm</span><span class="scilabopenclose">(</span><span class="scilabid">x</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">asum</span><span class="scilabstring">&#0034;</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">y5</span><span class="scilaboperator">=</span><span class="scilabid">snorm</span><span class="scilabopenclose">(</span><span class="scilabid">x</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">max</span><span class="scilabstring">&#0034;</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">See also</h3>
+   <ul class="itemizedlist"><li class="member"><a href="fls_structure.html" class="link">fls_structure</a></li>
+   <li class="member"><a href="tnorm.html" class="link">tnorm</a></li>
+   <li class="member"><a href="newfls.html" class="link">newfls</a></li>
+   <li class="member"><a href="scicos_snorm.html" class="link">scicos_snorm</a></li></ul></div>
+
+<div class="refsection"><h3 class="title">Authors</h3>
+   <ul class="itemizedlist"><li class="member">Jaime Urzua Grez</li>
+   <li class="member">Holger Nahrstaedt</li></ul></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="smf.html">&lt;&lt; smf</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_161df957ee5084fa35dfab9386dd87ac.html">sciFLT</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="subclust.html">subclust &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>
